@@ -1,0 +1,219 @@
+*{                 
+    margin: 0px;
+    border: 0px;       
+    padding: 0px;      
+}
+.barra-menu{
+    display: grid;
+    height: 50vh;
+    grid-template-areas:
+        "menu nav"
+        "menu section"
+        "footer section";
+    grid-template-columns: 1fr 2fr;
+    color: black;
+}
+
+nav {
+    grid-area: nav;
+    background-color:#e0ccec;
+    height: 10vh; 
+}
+menu {
+    grid-area: menu;
+    background-color: #715383;
+    height: 85vh; }
+
+section {
+    grid-area: section;
+    background-color: white; 
+    height: 90vh; }
+
+footer {
+    grid-area: footer;
+    background-color:#e0ccec;
+    height: 15vh; 
+    }
+
+.menu-titulo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+   padding: 10%;
+   font-size: 4vh;
+}
+
+.icono-hamburguesa{
+    display:none;
+}
+.menu-lateral{
+    display:flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items:center;
+    font-size: 3vh;
+    color:white;
+}
+.item-menu{
+    padding-bottom: 7px;
+}
+
+.barra-nav{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    padding:10px;
+    color: white;
+}
+.select{
+    color: #697797;
+    border-radius: 10%;
+    width:90%;
+}
+
+
+.mascotas {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: white;
+    margin: 10px;
+    padding: 0px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 30px;
+}
+
+.foto{
+    width: 255px;
+    height: 200px;
+    border-width: thin;
+    border-style: solid;
+    border-color:rgb(207, 155, 255);
+    border-radius: 5px;
+}
+.tamaño-foto{
+    width: 150px;
+    height: 150px;
+}
+.texto-imagen{
+    font-size: 14px;
+    color:#444449;
+}
+
+.formato-boton{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    font-size: 12px;
+    width:100%;
+}
+.boton{
+    background: #c28ee0;
+    color:#FFFFFF;
+    padding: 4px 14px; 
+    cursor: pointer;
+}
+.boton-pagina{
+    background-color: #c28ee0;
+}
+.footer{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#FFFFFF;
+}
+.icono{
+    padding: 15px ;
+}
+
+.texto-footer{
+    font-size: 16px;
+}
+
+
+.barra-pagina{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px ;
+}
+.pagina {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.pagina li {display: inline;}
+
+.pagina li a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+        border: 1px solid #ad8fad;
+}
+
+
+@media (max-width: 576px) {
+    .barra-menu{
+        grid-template-areas:
+        "menu"
+        "nav"
+        "section"
+        "footer";
+        grid-template-columns: auto;
+    }
+    .menu-lateral{
+        display: none;
+    }
+    menu {
+        grid-area: menu;
+        background-color: #e49866;
+        height: auto !important;
+    }
+    nav {
+        grid-area: nav;
+        background-color:#e4c6ae;
+        height: 10vh !important;
+    }
+    .boton{
+        background: #e0a88e;
+        color:#FFFFFF;
+        padding: 4px 14px; 
+        cursor: pointer;
+    }
+    .boton-pagina{
+        background-color: #e0ac8e;
+    }
+    section {
+        grid-area: section;
+        background-color: white;
+        height: auto;
+    }
+    .menu-titulo{
+        display: flex;
+        padding:20px 0px 0px 20px;
+    }
+    .icono-hamburguesa{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding:0px 20px 0px 0px;
+    }
+    .mascotas{
+        display: grid;
+        grid-template-columns: 257px;
+        grid-gap: 10px !important;
+        background-color: white;
+        margin: 13px 30px 5px 30px;
+        padding: 0px 80px 0px 80px;
+    }
+}
